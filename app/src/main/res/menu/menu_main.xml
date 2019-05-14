@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.rajat.applocation.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_history"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="History">
+        <menu>
+
+            <group
+                android:checkableBehavior="single" >
+                <item android:id="@+id/sub_map"
+                    android:title="Map View"
+                    android:orderInCategory="100"
+                    app:showAsAction="never" />
+
+                <item android:id="@+id/sub_list"
+                    android:title="List View"
+                    android:orderInCategory="100"
+                    app:showAsAction="never"/>
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/menu_sync"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        android:title="Sync data"></item>
+</menu>
