@@ -14,10 +14,12 @@ import android.widget.Toast;
 
 import com.rajat.applocation.service.LocationService;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = MainActivity.class.getSimpleName();
-    Button park,home,save;
-    Intent intent=new Intent();
+    Button park;
+    Button home;
+    Button save;
+    Intent intent = new Intent();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +28,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Intent intentService=new Intent(MainActivity.this, LocationService.class);
+        Intent intentService = new Intent(MainActivity.this, LocationService.class);
         startService(intentService);
 
-        park=(Button) findViewById(R.id.btn_park);
-        home=(Button) findViewById(R.id.btn_home);
-        save=(Button) findViewById(R.id.btn_save);
+        park = (Button) findViewById(R.id.btn_park);
+        home = (Button) findViewById(R.id.btn_home);
+        save = (Button) findViewById(R.id.btn_save);
 
         park.setOnClickListener(this);
         home.setOnClickListener(this);
@@ -69,12 +71,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (id) {
             case R.id.sub_list:
                 msg = "List";
-                intent=new Intent(MainActivity.this,HistoryListActivity.class);
+                intent = new Intent(MainActivity.this, HistoryListActivity.class);
                 startActivity(intent);
                 break;
             case R.id.sub_map:
                 msg = "Map";
-                intent=new Intent(MainActivity.this,HistoryMapActivity.class);
+                intent = new Intent(MainActivity.this, HistoryMapActivity.class);
                 startActivity(intent);
                 break;
             default:
@@ -88,13 +90,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_park:intent=new Intent(MainActivity.this,ParkActivity.class);
+            case R.id.btn_park:
+                intent = new Intent(MainActivity.this, ParkActivity.class);
                 startActivity(intent);
                 break;
 //            case R.id.btn_home:intent=new Intent(MainActivity.this,HomeActivity.class);
 //
 //                break;
-            case R.id.btn_save:intent=new Intent(MainActivity.this,SaveActivity.class);
+            case R.id.btn_save:
+                intent = new Intent(MainActivity.this, SaveActivity.class);
                 startActivity(intent);
                 break;
 
