@@ -52,9 +52,10 @@
 
         <activity
             android:name=".HistoryMapActivity"
-            android:label="@string/title_activity_history_map"></activity>
-        <activity android:name=".HistoryListActivity"
-            android:label="History"></activity>
+            android:label="@string/title_activity_history_map" />
+        <activity
+            android:name=".HistoryListActivity"
+            android:label="History" />
     </application>
 
 </manifest>
